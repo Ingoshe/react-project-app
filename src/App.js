@@ -1,24 +1,107 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import UpcomingEvents from "./Components/UpcomingEvents";
+
+import Container from "react-bootstrap/Container";
+
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Contact from "./Components/Contact";
+import Faq from "./Components/Faq";
+import ErrorPage from "./Components/ErrorPage";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar fixed="top" bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="/">JELA 5TAR</Navbar.Brand>
+          <Nav className=" text-end">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="about">About Us</Nav.Link>
+            <Nav.Link href="events">Upcoming Events</Nav.Link>
+            <NavDropdown title="Help" id="basic-nav-dropdown">
+              <NavDropdown.Item href="contact">Contact Us</NavDropdown.Item>
+              <NavDropdown.Item href="faq">FAQs</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Container>
+      </Navbar>
+      
+
+      <h1>
+        <b>JELA 5TAR</b>
+      </h1>
+
+      {/* {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
+        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+          <Container fluid>
+            <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  Offcanvas
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link href="/">Home</Nav.Link>
+                  <Nav.Link href="events">Upcoming Events</Nav.Link>
+                  <NavDropdown
+                    title="Dropdown"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action5">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                </Nav>
+                <Form className="d-flex">
+                  <Form.Control
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                  />
+                  <Button variant="outline-success">Search</Button>
+                </Form>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))} */}
+
+      {/* <nav>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="about">About</NavLink>
+        <NavLink to="events">Upcoming Events</NavLink>
+        <NavLink to="help">Help</NavLink>
+      </nav> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="events" element={<UpcomingEvents />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="faq" element={<Faq />} />
+        <Route path="*" element={<ErrorPage/>}/>
+      </Routes>
+    
+    </BrowserRouter>
   );
 }
 
