@@ -1,44 +1,28 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import UpcomingEvents from "./Components/UpcomingEvents";
 
-import Container from "react-bootstrap/Container";
-
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Contact from "./Components/Contact";
 import Faq from "./Components/Faq";
 import ErrorPage from "./Components/ErrorPage";
-
+import NavBar from "./Components/NavBar";
+// import Carousel from './Components/Carousel'
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar fixed="top" bg="primary" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="/">JELA 5TAR</Navbar.Brand>
-          <Nav className=" text-end">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="about">About Us</Nav.Link>
-            <Nav.Link href="events">Upcoming Events</Nav.Link>
-            <NavDropdown title="Help" id="basic-nav-dropdown">
-              <NavDropdown.Item href="contact">Contact Us</NavDropdown.Item>
-              <NavDropdown.Item href="faq">FAQs</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Container>
-      </Navbar>
-      
-
+    <>
+    <NavBar/>
+      {/* <Carousel/> */}
+      <BrowserRouter>
+        {/* 
       <h1>
         <b>JELA 5TAR</b>
-      </h1>
+      </h1> */}
 
-      {/* {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
+        {/* {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
           <Container fluid>
             <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
@@ -86,22 +70,22 @@ function App() {
         </Navbar>
       ))} */}
 
-      {/* <nav>
+        {/* <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="about">About</NavLink>
         <NavLink to="events">Upcoming Events</NavLink>
         <NavLink to="help">Help</NavLink>
       </nav> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="events" element={<UpcomingEvents />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="faq" element={<Faq />} />
-        <Route path="*" element={<ErrorPage/>}/>
-      </Routes>
-    
-    </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="events" element={<UpcomingEvents />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="faq" element={<Faq />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

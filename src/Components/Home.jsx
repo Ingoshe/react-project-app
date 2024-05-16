@@ -1,29 +1,78 @@
 import React from "react";
 import WeeklyBlog from "./WeeklyBlog";
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
+import Row from "react-bootstrap/Row";
 
 import Footer from "./Footer";
-import BlackWhite from "./b&wEducation.jpeg"
-import Beducate from "./Beducation.png"
-import Peducate from "./Peducation.jpeg"
-import Grenade from "./GrenadeBM.jpeg"
-import Thorns from "./Thorns.webp"
-import Btn from "./RedemptionBtn.jpeg"
-import BigMad from "./BigMad.jpeg"
-import Work from "./Work.jpeg"
-import Wheat from "./Wheat.jpeg"
+import BlackWhite from "./b&wEducation.jpeg";
+
+import Peducate from "./Peducation.jpeg";
+import Grenade from "./GrenadeBM.jpeg";
+// import Thorns from "./Thorns.webp"
+import Btn from "./RedemptionBtn.jpeg";
+import BigMad from "./BigMad.jpeg";
+import Work from "./Work.jpeg";
+import Wheat from "./Wheat.jpeg";
+import { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import img1 from "./CarouselImage1.jpg";
+import img2 from "./CarouselImage2.jpeg";
+import img3 from "./CarouselImage3.jpg";
 
 function Home() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
   return (
-    
-      
-      <div className="home-content bg-red-500">
-        <h1>
+    <div className="home-content bg-yellow-500">
+      <h1>
         <b>JELA 5TAR</b>
       </h1>
+      {/* Carousel */}
+      <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel.Item>
+          <img
+            style={{ height: "83vh", width: "1400px" }}
+            src={img1}
+            alt="imge"
+            text="First slide"
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            style={{ height: "83vh", width: "1400px" }}
+            src={img2}
+            alt="imge"
+            text="First slide"
+          />
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            style={{ height: "83vh", width: "1400px" }}
+            src={img3}
+            alt="imge"
+            text="First slide"
+          />
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
       <p className="m-16">
         Positive human interactions and relationships play a crucial role in the
         redemption and rehabilitation of convicts. Prison officers who treat
@@ -37,20 +86,20 @@ function Home() {
         and well-being is most conducive to inmates' successful reintegration
         into society upon release. Compassion and a focus on redemption, rather
         than solely punishment, is vital to break the cycle of recidivism and
-        help offenders become productive members of their communities. 
+        help offenders become productive members of their communities.
         <Container className="m-5">
-      <Row>
-        <Col xs={6} md={4}>
-          <Image src={BigMad} rounded />
-        </Col>
-        <Col xs={6} md={4}>
-          <Image src={Work} roundedCircle />
-        </Col>
-        <Col xs={6} md={4}>
-          <Image src={Wheat} thumbnail />
-        </Col>
-      </Row>
-    </Container>
+          <Row>
+            <Col xs={6} md={4}>
+              <Image src={BigMad} rounded />
+            </Col>
+            <Col xs={6} md={4}>
+              <Image src={Work} roundedCircle />
+            </Col>
+            <Col xs={6} md={4}>
+              <Image src={Wheat} thumbnail />
+            </Col>
+          </Row>
+        </Container>
       </p>
       <p className="m-16">
         Educating convicts is crucial for promoting a literate environment as it
@@ -67,16 +116,16 @@ function Home() {
         also society as a whole by creating a more informed, engaged, and
         literate population.
         <Container className="m-5">
-      <Row>
-        <Col xs={6} md={4}>
-          <Image src={BlackWhite}rounded />
-        </Col>
-        
-        <Col xs={6} md={4}>
-          <Image src={Peducate} thumbnail />
-        </Col>
-      </Row>
-    </Container>
+          <Row>
+            <Col xs={6} md={4}>
+              <Image src={BlackWhite} rounded />
+            </Col>
+
+            <Col xs={6} md={4}>
+              <Image src={Peducate} thumbnail />
+            </Col>
+          </Row>
+        </Container>
       </p>
       <p className="m-16">
         When convicts seek redemption and successful reintegration into society,
@@ -102,16 +151,16 @@ function Home() {
         and a commitment to second chances for those who have paid their dues to
         society.
         <Container className="m-5">
-      <Row>
-        <Col xs={6} md={4}>
-          <Image src={Grenade} rounded />
-        </Col>
-        
-        <Col xs={6} md={4}>
-          <Image src={Btn} thumbnail />
-        </Col>
-      </Row>
-    </Container>
+          <Row>
+            <Col xs={6} md={4}>
+              <Image src={Grenade} rounded />
+            </Col>
+
+            <Col xs={6} md={4}>
+              <Image src={Btn} thumbnail />
+            </Col>
+          </Row>
+        </Container>
       </p>
       <p className="m-16">
         Criminal rehabilitation institutions play a crucial role in providing
@@ -134,13 +183,13 @@ function Home() {
         for convicts to grow and improve themselves while fostering an
         environment that supports their redemption and successful reintegration
         into society.
-      
-      </p><br /><br />
+      </p>
+      <br />
+      <br />
       <p className="m-8">Read this weeks blog by one of our members.</p>
-      <WeeklyBlog/>
-      <Footer/>
-      </div>
-    
+      <WeeklyBlog />
+      <Footer />
+    </div>
   );
 }
 
