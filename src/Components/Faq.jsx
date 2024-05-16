@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 function Faq() {
   return (
-    <div className="questions bg-red-500">
+    <div className="questions bg-yellow-500">
       <ul>
         <li>
           {" "}

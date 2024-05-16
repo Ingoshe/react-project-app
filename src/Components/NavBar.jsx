@@ -7,17 +7,19 @@ import Nav from 'react-bootstrap/Nav'
 function NavBar() {
   return (
     <div className="nav-bar">
-       <Navbar fixed="top" bg="danger" data-bs-theme="dark">
+      
+       <Navbar  bg="danger" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="/">JELA 5TAR</Navbar.Brand>
-          <Nav className=" text-end">
+          <Nav >
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="about">About Us</Nav.Link>
-            <Nav.Link href="events">Upcoming Events</Nav.Link>
             <NavDropdown title="Help" id="basic-nav-dropdown">
               <NavDropdown.Item href="contact">Contact Us</NavDropdown.Item>
               <NavDropdown.Item href="faq">FAQs</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="about">About Us</Nav.Link>
+            <Nav.Link href="events">Upcoming Events</Nav.Link>
+           
           </Nav>
         </Container>
       </Navbar>

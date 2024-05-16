@@ -20,6 +20,8 @@ import Carousel from "react-bootstrap/Carousel";
 import img1 from "./CarouselImage1.jpg";
 import img2 from "./CarouselImage2.jpeg";
 import img3 from "./CarouselImage3.jpg";
+import Navigation from "./Navigation";
+import NavBar from "./NavBar";
 
 function Home() {
   const [index, setIndex] = useState(0);
@@ -29,47 +31,50 @@ function Home() {
   };
   return (
     <div className="home-content bg-yellow-500">
-      <h1>
+           {/* <Navigation/> */}
+           <NavBar/>
+
+      {/* <h1>
         <b>JELA 5TAR</b>
-      </h1>
+      </h1> */}
       {/* Carousel */}
       <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <img
-            style={{ height: "83vh", width: "1400px" }}
+            style={{ height: "90vh", width: "1400px" }}
             src={img1}
             alt="imge"
             text="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            {/* <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            style={{ height: "83vh", width: "1400px" }}
+            style={{ height: "90vh", width: "1400px" }}
             src={img2}
             alt="imge"
             text="First slide"
           />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            {/* <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
-            style={{ height: "83vh", width: "1400px" }}
+            style={{ height: "90vh", width: "1400px" }}
             src={img3}
             alt="imge"
             text="First slide"
           />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            {/* <h3>Third slide label</h3>
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            </p> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
@@ -101,32 +106,41 @@ function Home() {
           </Row>
         </Container>
       </p>
-      <p className="m-16">
-        Educating convicts is crucial for promoting a literate environment as it
-        not only offers individuals a chance at rehabilitation but also
-        contributes to reducing recidivism rates. By providing education to
-        those incarcerated, we empower them with the tools to reintegrate into
-        society upon release, increasing their chances of securing employment
-        and leading productive lives. Furthermore, a literate environment within
-        correctional facilities fosters personal growth, critical thinking
-        skills, and a sense of self-worth among inmates. Education can break the
-        cycle of crime by offering opportunities for self-improvement and
-        instilling a desire for lifelong learning. Ultimately, investing in the
-        education of convicts not only benefits the individuals themselves but
-        also society as a whole by creating a more informed, engaged, and
-        literate population.
-        <Container className="m-5">
-          <Row>
-            <Col xs={6} md={4}>
-              <Image src={BlackWhite} rounded />
-            </Col>
+      <div className="flex flex-auto">
+        <div>
+          {" "}
+          <p>
+            Educating convicts is crucial for promoting a literate environment
+            as it not only offers individuals a chance at rehabilitation but
+            also contributes to reducing recidivism rates. By providing
+            education to those incarcerated, we empower them with the tools to
+            reintegrate into society upon release, increasing their chances of
+            securing employment and leading productive lives. Furthermore, a
+            literate environment within correctional facilities fosters personal
+            growth, critical thinking skills, and a sense of self-worth among
+            inmates. Education can break the cycle of crime by offering
+            opportunities for self-improvement and instilling a desire for
+            lifelong learning. Ultimately, investing in the education of
+            convicts not only benefits the individuals themselves but also
+            society as a whole by creating a more informed, engaged, and
+            literate population.
+          </p>
+        </div>
+        <div>
+          <Container>
+            <Row>
+              <Col xs={6} md={4}>
+                <Image src={BlackWhite} rounded />
+              </Col>
 
-            <Col xs={6} md={4}>
-              <Image src={Peducate} thumbnail />
-            </Col>
-          </Row>
-        </Container>
-      </p>
+              <Col xs={6} md={4}>
+                <Image src={Peducate} thumbnail />
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </div>
+
       <p className="m-16">
         When convicts seek redemption and successful reintegration into society,
         it involves a complex process of acknowledging wrongdoing, serving their

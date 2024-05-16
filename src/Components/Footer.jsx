@@ -8,9 +8,10 @@ function Footer() {
     event.preventDefault();
     alert("Successful");
   };
+
   return (
     <>
-      <div>
+      <div className="bg-red-400">
         <div className="flex flex-auto justify-evenly">
           <ul className=" flex flex-col">
             <NavLink to="/">Home</NavLink>
@@ -21,10 +22,10 @@ function Footer() {
           </ul>
           <div className="newsletter">
             <p>
-              Subscribe to receive inspiration, ideas, and news in your inbox.
+              Subscribe to receive inspiration, ideas, events' reminders and news in your inbox.
             </p>
             <br />
-            <Form>
+            <Form  onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
@@ -32,19 +33,18 @@ function Footer() {
                   We'll never share your email with anyone else.
                 </Form.Text>
               </Form.Group>
-              <Button variant="primary" type="submit" onSubmit={handleSubmit}>
+              <Button variant="primary" type="submit">
                 Submit
               </Button>
             </Form>
           </div>
         </div>
+        <br />
 
-        <div className="copyright">
-          <p>
-            Copyright © 2024 – JELA 5TAR. All Rights Reserved. Website by:
-            WESLEY STUDIOS
-          </p>
-        </div>
+        <p className="text-centre">
+          Copyright © 2024 – JELA 5TAR. All Rights Reserved. Website by: WESLEY
+          STUDIOS
+        </p>
       </div>
     </>
   );

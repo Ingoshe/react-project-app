@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 function About() {
   return (
-    <div className="about-us bg-red-500 text-lg">
+    <div className="about-us bg-yellow-500 text-lg">
       <mark>**About Us**</mark>
       <br /> At JELA 5TAR, we are dedicated to providing a comprehensive and
       supportive environment for individuals who have been involved in the

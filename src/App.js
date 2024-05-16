@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+// import './App.css'
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
@@ -8,13 +10,15 @@ import Contact from "./Components/Contact";
 import Faq from "./Components/Faq";
 import ErrorPage from "./Components/ErrorPage";
 import NavBar from "./Components/NavBar";
+import Navigation from "./Components/Navigation";
 // import Carousel from './Components/Carousel'
 
 
 function App() {
   return (
-    <>
-    <NavBar/>
+    <div className="App">
+
+    {/* <NavBar/> */}
       {/* <Carousel/> */}
       <BrowserRouter>
         {/* 
@@ -85,7 +89,7 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

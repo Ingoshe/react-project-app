@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 function Contact() {
   return (
-    <div className="contact bg-red-500">
+    <div className="contact bg-yellow-500">
       <h1>
         <b>
           <i>CONTACT US</i>
