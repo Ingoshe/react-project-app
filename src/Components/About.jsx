@@ -1,9 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
+import NavBar from "./NavBar";
 
 function About() {
   return (
-    <div className="about-us bg-yellow-500 text-lg">
+    <>
+    <NavBar/>
+    <div className="about-us m-16 text-lg font-serif italic">
       <mark>**About Us**</mark>
       <br /> At JELA 5TAR, we are dedicated to providing a comprehensive and
       supportive environment for individuals who have been involved in the
@@ -63,8 +66,10 @@ function About() {
       know is in need of our services, we encourage you to reach out to us. We
       also welcome volunteers, donors, and community partners who share our
       vision of creating a safer, more compassionate society. 
-      <Footer/>
+      
     </div>
+    <Footer/>
+    </>
   );
 }
 

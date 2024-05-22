@@ -1,9 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
+import NavBar from "./NavBar";
 
 function Contact() {
   return (
-    <div className="contact bg-yellow-500">
+    <>
+    <NavBar/>
+    <div className="contact  font-serif italic">
       <h1>
         <b>
           <i>CONTACT US</i>
@@ -26,6 +29,7 @@ function Contact() {
       </p><br /><br /><br /><br /><br /><br />
       <Footer />
     </div>
+    </>
   );
 }
 

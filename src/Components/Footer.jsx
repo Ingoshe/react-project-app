@@ -11,9 +11,12 @@ function Footer() {
 
   return (
     <>
-      <div className="bg-red-400">
+      <div
+        style={{ paddingBottom: "10px" }}
+        className="bg-red-400 font-serif italic"
+      >
         <div className="flex flex-auto justify-evenly">
-          <ul className=" flex flex-col">
+          <ul className=" flex flex-col mt-14">
             <NavLink to="/">Home</NavLink>
             <NavLink to="about">About Us</NavLink>
             <NavLink to="events">Upcoming Events</NavLink>
@@ -22,10 +25,11 @@ function Footer() {
           </ul>
           <div className="newsletter">
             <p>
-              Subscribe to receive inspiration, ideas, events' reminders and news in your inbox.
+              Subscribe to receive inspiration, ideas, events' reminders and
+              news in your inbox.
             </p>
-            <br />
-            <Form  onSubmit={handleSubmit}>
+
+            <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
@@ -41,7 +45,10 @@ function Footer() {
         </div>
         <br />
 
-        <p className="text-centre">
+        <p
+          className="ml-80
+         mr-72"
+        >
           Copyright © 2024 – JELA 5TAR. All Rights Reserved. Website by: WESLEY
           STUDIOS
         </p>

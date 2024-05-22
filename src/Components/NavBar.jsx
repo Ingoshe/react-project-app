@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav'
 
 function NavBar() {
   return (
-    <div className="nav-bar">
+    <div className="nav-bar font-serif italic">
       
        <Navbar  bg="danger" data-bs-theme="dark">
         <Container>

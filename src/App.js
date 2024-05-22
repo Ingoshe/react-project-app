@@ -11,14 +11,13 @@ import Faq from "./Components/Faq";
 import ErrorPage from "./Components/ErrorPage";
 import NavBar from "./Components/NavBar";
 import Navigation from "./Components/Navigation";
+import EventForm from "./Components/EventForm";
 // import Carousel from './Components/Carousel'
-
 
 function App() {
   return (
     <div className="App">
-
-    {/* <NavBar/> */}
+      {/* <NavBar/> */}
       {/* <Carousel/> */}
       <BrowserRouter>
         {/* 
@@ -86,6 +85,7 @@ function App() {
           <Route path="events" element={<UpcomingEvents />} />
           <Route path="contact" element={<Contact />} />
           <Route path="faq" element={<Faq />} />
+          <Route path="form" element={<EventForm />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

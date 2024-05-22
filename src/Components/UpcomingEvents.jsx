@@ -2,13 +2,25 @@ import React from "react";
 import Footer from "./Footer";
 import Events from "./Events";
 import img1 from "./b&wEducation.jpeg";
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import NavBar from "./NavBar";
+import art from './Art ill.jpeg'
+import athletics from './ath.png'
+import qa from './qua.jpeg'
+import debate from './debate.webp'
+import wape from './peacewar.jpg'
+import serve from './The-Church.jpeg'
+import couns from './guid.jpeg'
+import trade from './fair.jpg'
+import fut from './fut.jpg'
+import rugi from './rugi.jpg'
 
 function UpcomingEvents() {
   return (
     <>
-      <div className="upcoming-events bg-yellow-500 grid grid-cols-4 gap-4">
+      <NavBar />
+      <div className="upcoming-events  grid grid-cols-4 gap-2 m-auto font-serif italic">
         {/* <ul className="ml-56">
         <li>Rugby Match <br />28th MAY</li><br />
         <li>Debate Contest <br />4th JUNE</li><br />
@@ -18,117 +30,65 @@ function UpcomingEvents() {
         <li>Final Exams <br />1st SEPTEMBER</li><br />
      </ul> */}
         <Events
-          img={img1}
-          name="Rugby Match"
-          date="12th May, 2024"
+          img={debate}
+          title="Debate Contest"
+          date="30th May, 2024"
+          location="Bomas of Kenya"
+        />
+        <Events
+          img={couns}
+          title="Guid & Couns Function "
+          date="5th June, 2024"
+          location="Bomas of Kenya"
+        />
+        <Events
+          img={art}
+          title="Art Exhibition"
+          date="16th June, 2024"
+          location="Art Galleria"
+        />
+        <Events
+          img={qa}
+          title="General Knowledge Compe."
+          date="20th June, 2024"
+          location="Kitmap Place"
+        />
+        <Events
+          img={wape}
+          title="War & Peace Seminar"
+          date="25th June, 2024"
+          location="Bomas of Kenya"
+        />
+        <Events
+          img={trade}
+          title="Trade Fair"
+          date="1st July, 2024"
           location="Nyayo Grounds"
         />
         <Events
-          img={img1}
-          name="Rugby Match"
-          date="12th May, 2024"
-          location="Nyayo Grounds"
+          img={serve}
+          title="Annual Church Service"
+          date="9th July, 2024"
+          location="VRC"
         />
         <Events
-          img={img1}
-          name="Rugby Match"
-          date="12th May, 2024"
-          location="Nyayo Grounds"
+          img={fut}
+          title="Football Friendly vs Kamiti"
+          date="17th July, 2024"
+          location="Kasarani Stadium"
         />
         <Events
-          img={img1}
-          name="Rugby Match"
-          date="12th May, 2024"
-          location="Nyayo Grounds"
+          img={rugi}
+          title="Rugby Finals vs Kogalo"
+          date="21st July, 2024"
+          location="Nyayo Stadium"
         />
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
+        <Events
+          img={athletics}
+          title="Athletics"
+          date="31st August, 2024"
+          location="Kasarani Stadium"
+        />
       </div>
       <Footer />
     </>
