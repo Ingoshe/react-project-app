@@ -1,34 +1,23 @@
 import React from "react";
 import Footer from "./Footer";
 import Events from "./Events";
-import img1 from "./b&wEducation.jpeg";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import NavBar from "./NavBar";
-import art from './Art ill.jpeg'
-import athletics from './ath.png'
-import qa from './qua.jpeg'
-import debate from './debate.webp'
-import wape from './peacewar.jpg'
-import serve from './The-Church.jpeg'
-import couns from './guid.jpeg'
-import trade from './fair.jpg'
-import fut from './fut.jpg'
-import rugi from './rugi.jpg'
+import art from "./Art ill.jpeg";
+import athletics from "./ath.png";
+import qa from "./qua.jpeg";
+import debate from "./debate.webp";
+import wape from "./peacewar.jpg";
+import serve from "./The-Church.jpeg";
+import couns from "./guid.jpeg";
+import trade from "./fair.jpg";
+import fut from "./fut.jpg";
+import rugi from "./rugi.jpg";
 
 function UpcomingEvents() {
   return (
     <>
       <NavBar />
-      <div className="upcoming-events  grid grid-cols-4 gap-2 m-auto font-serif italic">
-        {/* <ul className="ml-56">
-        <li>Rugby Match <br />28th MAY</li><br />
-        <li>Debate Contest <br />4th JUNE</li><br />
-        <li>Athletics <br />30th JUNE</li><br />
-        <li>Football Match <br />10th JULY</li><br />
-        <li>Training Camp <br />16th JULY</li><br />
-        <li>Final Exams <br />1st SEPTEMBER</li><br />
-     </ul> */}
+      <div className="upcoming-events  grid grid-cols-4 gap-2 m-auto font-serif italic bg-gradient-to-r from-blue-500 to-green-500">
         <Events
           img={debate}
           title="Debate Contest"

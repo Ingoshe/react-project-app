@@ -8,7 +8,7 @@ function Faq() {
     <>
       <NavBar />
 
-      <div className="questions  font-serif italic">
+      <div className="questions  font-serif italic ">
         <Accordion>
           <Accordion.Item eventKey="0">
             <Accordion.Header>Recruitment</Accordion.Header>

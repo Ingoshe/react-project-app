@@ -4,44 +4,25 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
-import Carousel from './Carousel'
-
+import Carousel from "./Carousel";
 import Footer from "./Footer";
-import BlackWhite from "./b&wEducation.jpeg";
-
 import Peducate from "./Peducation.jpeg";
-import Grenade from "./GrenadeBM.jpeg";
-// import Thorns from "./Thorns.webp"
 import Btn from "./RedemptionBtn.jpeg";
 import BigMad from "./BigMad.jpeg";
 import Work from "./Work.jpeg";
 import Wheat from "./Wheat.jpeg";
-import { useState } from "react";
-// import Carousel from "react-bootstrap/Carousel";
-import img1 from "./CarouselImage1.jpg";
-import img2 from "./CarouselImage2.jpeg";
-import img3 from "./CarouselImage3.jpg";
-import art from "./Art ill.jpeg";
 import Bars from "./behind bars.png";
-import Car1 from './art of redemption.webp'
-// import Navigation from "./Navigation";
 import NavBar from "./NavBar";
 
 
 function Home() {
- 
   return (
-    <div>
+    <div >
       <div className="home-content font-serif italic">
-        {/* <Navigation/> */}
         <NavBar />
 
-        {/* <h1>
-        <b>JELA 5TAR</b>
-      </h1> */}
-        {/* Carousel */}
-        <Carousel/>
-        
+        <Carousel />
+
         <p className="m-16">
           Positive human interactions and relationships play a crucial role in
           the redemption and rehabilitation of convicts. Prison officers who
@@ -102,7 +83,12 @@ function Home() {
         </div>
         <div className="flex m-16">
           <div className="m-auto">
-            <img className="rounded-full" style={{height:"234px", width:"3000px"}} src={Bars} alt="Behind Bars" />
+            <img
+              className="rounded-full"
+              style={{ height: "234px", width: "3000px" }}
+              src={Bars}
+              alt="Behind Bars"
+            />
           </div>
           <div className="ml-24">
             <p>
@@ -170,7 +156,7 @@ function Home() {
         </div>
         {/* <p className="m-8">Read this weeks blog by one of our members.</p> */}
         {/* <WeeklyBlog /> */}
-        <WeeklyBlog/>
+        <WeeklyBlog />
         <Footer />
       </div>
     </div>

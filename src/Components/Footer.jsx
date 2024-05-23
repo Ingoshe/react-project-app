@@ -6,7 +6,9 @@ import { NavLink } from "react-router-dom";
 function Footer() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Successful");
+    alert(
+      "Successful.You will receive inspiration, ideas, events' reminders and news in your inbox"
+    );
   };
 
   return (
@@ -32,7 +34,7 @@ function Footer() {
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control type="email" placeholder="Enter email" required />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
                 </Form.Text>
@@ -44,14 +46,13 @@ function Footer() {
           </div>
         </div>
         <br />
-
-        <p
-          className="ml-80
-         mr-72"
-        >
-          Copyright © 2024 – JELA 5TAR. All Rights Reserved. Website by: WESLEY
-          STUDIOS
-        </p>
+        <div style={{textAlign:"center"}}>
+          {" "}
+          <p>
+            Copyright © 2024 – JELA 5TAR. All Rights Reserved. Website by:
+            WESLEY STUDIOS
+          </p>
+        </div>
       </div>
     </>
   );
