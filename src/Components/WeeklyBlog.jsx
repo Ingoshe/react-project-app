@@ -3,7 +3,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 function WeeklyBlog() {
   return (
-    <div className="ml- bg-red-600">
+    <div>
       {/* Accordion */}
       <Accordion>
         <Accordion.Item eventKey="0">

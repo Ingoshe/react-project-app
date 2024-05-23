@@ -17,7 +17,7 @@ function Events(props) {
           <p className="text-gray-700 text-base">{props.date}</p>
           <p className="text-gray-700 text-base">{props.location}</p>
           <a href="form">
-            <Button variant="info">Book</Button>
+            <Button variant="dark">Book</Button>
           </a>
         </div>
       </div>

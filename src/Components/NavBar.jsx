@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <div className="nav-bar font-serif italic ">
       
-       <Navbar  bg="danger" data-bs-theme="dark">
+       <Navbar  bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="/">JELA 5TAR</Navbar.Brand>
           <Nav >
