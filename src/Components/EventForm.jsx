@@ -1,4 +1,5 @@
 import React from "react";
+
 import NavBar from "./NavBar";
 
 function EventForm() {
@@ -10,7 +11,7 @@ function EventForm() {
     <>
       <NavBar />
       <div className="event-form">
-        <div className="flex justify-center items-center h-screen bg-gradient-to-r from-blue-500 to-green-500">
+        <div className="flex justify-center items-center h-screen bg-red-300">
           <form
             className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md"
             onSubmit={handleSubmit}

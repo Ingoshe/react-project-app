@@ -17,7 +17,7 @@ function UpcomingEvents() {
   return (
     <>
       <NavBar />
-      <div className="upcoming-events  grid grid-cols-4 gap-2 m-auto font-serif italic bg-gradient-to-r from-blue-500 to-green-500">
+      <div className="upcoming-events  grid grid-cols-4 gap-2 m-auto font-serif italic bg-red-200">
         <Events
           img={debate}
           title="Debate Contest"

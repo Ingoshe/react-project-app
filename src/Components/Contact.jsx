@@ -6,7 +6,7 @@ function Contact() {
   return (
     <>
       <NavBar />
-      <div style={{textAlign:"center"}} className="contact font-serif italic bg-gradient-to-r from-blue-500 to-green-500">
+      <div style={{textAlign:"center"}} className="contact font-serif italic bg-red-200">
         <h1>
           <b>
             <i>CONTACT US</i>

@@ -8,7 +8,7 @@ function About() {
       <NavBar />
       <div
         style={{ textAlign: "center" }}
-        className="about-us m text-lg font-serif italic bg-gradient-to-r from-blue-500 to-green-500"
+        className="about-us m text-lg font-serif italic bg-red-200"
       >
         <mark>About Us</mark>
         <br /> At JELA 5TAR, we are dedicated to providing a comprehensive and
@@ -99,7 +99,7 @@ function About() {
         society, capable of making positive contributions to their communities.
         We measure our success by the number of individuals who successfully
         complete our programs, secure employment, and maintain a law-abiding
-        lifestyle upon release. <br />
+        lifestyle upon release. <br /><br />
         <mark>
           <i>Get Involved</i>
         </mark>

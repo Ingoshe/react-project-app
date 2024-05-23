@@ -15,7 +15,7 @@ function Footer() {
     <>
       <div
         style={{ paddingBottom: "10px" }}
-        className="bg-red-400 font-serif italic"
+        className="bg-red-500 font-serif italic"
       >
         <div className="flex flex-auto justify-evenly">
           <ul className=" flex flex-col mt-14">
