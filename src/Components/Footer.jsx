@@ -17,8 +17,8 @@ function Footer() {
         style={{ paddingBottom: "10px" }}
         className="bg-gray-800 font-serif italic text-white"
       >
-        <div className="flex flex-auto justify-evenly">
-          <ul className=" flex flex-col mt-14">
+        <div className="flex flex-auto justify-evenly ">
+          <ul className=" flex flex-col mt-14 ">
             <NavLink to="/">Home</NavLink>
             <NavLink to="about">About Us</NavLink>
             <NavLink to="events">Upcoming Events</NavLink>
